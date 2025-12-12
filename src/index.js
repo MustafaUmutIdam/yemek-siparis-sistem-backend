@@ -64,12 +64,12 @@ app.get('/api/v1/health/db', async (req, res) => {
 // API Routes
 app.use(`${process.env.API_PREFIX || '/api/v1'}/auth`, require('./routes/auth'));
 app.use(`${process.env.API_PREFIX || '/api/v1'}/admin`, require('./routes/admin'));
-// app.use(`${process.env.API_PREFIX}/owner`, require('./routes/owner'));
-// app.use(`${process.env.API_PREFIX}/restaurants`, require('./routes/restaurants'));
-// app.use(`${process.env.API_PREFIX}/products`, require('./routes/products'));
-// app.use(`${process.env.API_PREFIX}/couriers`, require('./routes/couriers'));
-// app.use(`${process.env.API_PREFIX}/consumers`, require('./routes/consumers'));
-// app.use(`${process.env.API_PREFIX}/orders`, require('./routes/orders'));
+app.use(`${process.env.API_PREFIX || '/api/v1'}/owner`, require('./routes/owner'));
+app.use(`${process.env.API_PREFIX || '/api/v1'}/products`, require('./routes/products'));
+app.use(`${process.env.API_PREFIX || '/api/v1'}/couriers`, require('./routes/couriers'));
+app.use(`${process.env.API_PREFIX || '/api/v1'}/orders`, require('./routes/orders'));
+app.use(`${process.env.API_PREFIX || '/api/v1'}/consumers`, require('./routes/consumers'));
+
 
 // Error Handler Middleware (must be last)
 app.use(errorHandler);

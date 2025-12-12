@@ -40,15 +40,39 @@ const options = {
       {
         name: 'Admin',
         description: 'Admin paneli - Owner yönetimi'
+      },
+      {
+        name: 'Owner',
+        description: 'Owner - restoran yönetimi'
+      },
+      {
+        name: 'Products',
+        description: 'Product yönetimi (owner)'
+      },
+      {
+        name: 'Couriers',
+        description: 'Courier yönetimi (owner)'
+      },
+      {
+        name: 'Orders',
+        description: 'Order lifecycle'
+      },
+      {
+        name: 'Consumers',
+        description: 'Consumer operations and restaurant search'
       }
-    ]
+         ]
   },
   apis: [
     './src/routes/auth.js',
-    './src/routes/admin.js'
+    './src/routes/admin.js',
+    './src/routes/owner.js',
+    './src/routes/products.js',
+    './src/routes/couriers.js',
+    './src/routes/orders.js',
+    './src/routes/consumers.js'
   ]
 };
-
 const swaggerSpec = swaggerJsdoc(options);
 
 module.exports = swaggerSpec;

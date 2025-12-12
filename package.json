@@ -8,6 +8,7 @@
     "dev": "nodemon src/index.js",
     "test": "jest --coverage",
     "test:models": "node tests/models.test.js",
+    "swagger:dump": "node scripts/dumpSwagger.js",
     "lint": "eslint src --fix",
     "format": "prettier --write \"src/**/*.js\""
   },
